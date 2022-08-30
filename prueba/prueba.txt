@@ -609,4 +609,4 @@ function Invoke-BypassUAC
     Remove-Item -Path $TempPayloadPath -Force
 }
 
-Invoke-BypassUAC -Command 'start powershell.exe';
+
